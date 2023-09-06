@@ -1,5 +1,5 @@
 % Inputs
-rootfolder = 'D:\MatLab'; %where to install AstroPack.git
+rootfolder = 'C:\MatLab'; %where to install AstroPack.git
 
 % Clone AstroPack
 cd(rootfolder)
@@ -28,8 +28,11 @@ end
 % Test mex
 cd(rootfolder)
 try 
-    copyfile(fullfile(matlabroot,'extern','examples','mex','yprime.c'),'.')
-    mex yprime.c
+    % copyfile(fullfile(matlabroot,'extern','examples','mex','yprime.c'),'.')
+    % mex yprime.c
 catch
     error('Manual mex required: MatLab "Home" tab > Add ons > Search for "MinGW" > select "MATLAB Support for MinGW-w64 C/C++Compiler" > Install > Install ')
 end
+
+Installer.compileAllMex
+%ERRORS!!!
